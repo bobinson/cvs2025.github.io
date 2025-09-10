@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-light: #ffffff;
+            --bg-light: #f7fafc;
             --bg-white: #ffffff;
-            --text-dark: #631e1e;
-            --text-muted: #8b2f2f;
-            --primary: #632227;
-            --primary-light: #bd1c1c;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+            --primary: #2c5282;
+            --primary-light: #3b82f6;
             --border-color: #e2e8f0;
-            --accent: #f7fafc;
+            --accent: #edf2f7;
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -31,7 +31,7 @@
             font-family: 'Playfair Display', Georgia, serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(49, 16, 19, 0.8), rgba(223, 197, 199, 0.8)), url('images/banner.png');
+            background-image: linear-gradient(rgba(26, 32, 44, 0.8), rgba(44, 82, 130, 0.8)), url('images/banner.png');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -43,7 +43,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(133, 34, 42, 0.3);
+            background: rgba(44, 82, 130, 0.3);
             z-index: 1;
         }
         .hero-content {
@@ -104,18 +104,12 @@
             position: relative;
         }
         @media (min-width: 768px) {
-            .timeline .timeline-item:nth-child(odd) {
-                padding-right: calc(50% + 2rem);
-                text-align: right;
-            }
-            .timeline .timeline-item:nth-child(even) {
-                padding-left: calc(50% + 2rem);
-            }
             .timeline .timeline-item:nth-child(odd) .card::before {
                 content: '';
                 position: absolute;
-                top: 20px;
+                top: 50%;
                 left: 100%;
+                transform: translateY(-50%);
                 border-width: 10px;
                 border-style: solid;
                 border-color: transparent transparent transparent var(--border-color);
@@ -123,8 +117,9 @@
             .timeline .timeline-item:nth-child(even) .card::before {
                 content: '';
                 position: absolute;
-                top: 20px;
+                top: 50%;
                 right: 100%;
+                transform: translateY(-50%);
                 border-width: 10px;
                 border-style: solid;
                 border-color: transparent var(--border-color) transparent transparent;
@@ -216,7 +211,7 @@
             <h1 class="font-serif text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Cyber Vidhi Sangam</h1>
             <h2 class="text-xl md:text-4xl text-blue-100 mb-8"> CLCF Conclave 2025 : Law, Tech & Tomorrow </h2>
             
-            <p class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8">24 October 2025</p>
+            <p class="text-3xl md:text-4xl font-bold text-blue-200 mb-8">24 October 2025</p>
             
             <a href="#register" class="btn-primary text-lg px-8 py-4">Reserve Your Seat</a>
         </div>
@@ -314,10 +309,10 @@
         <section id="schedule" class="py-20">
             <h2 class="section-title reveal">Day's Agenda</h2>
             <div class="max-w-3xl mx-auto relative timeline">
-                <div class="border-l-2 border-dashed border-gray-300 absolute h-full top-0 left-4 md:left-1/2 -translate-x-1/2"></div>
+                <div class="hidden md:flex border-l-2 border-dashed border-gray-300 absolute h-full top-0 left-4 md:left-1/2 -translate-x-1/2"></div>
                 <div class="timeline-item mb-8 flex justify-between items-center w-full right-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 timeline-dot"></div>
+                    <div class="hidden md:flex z-20 items-center order-1 timeline-dot"></div>
                     <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
                         <p class="text-gray-600 text-sm">16:00 - 16:30</p>
                         <h3 class="font-bold text-gray-900 text-lg">Registration & Welcome Coffee</h3>
@@ -325,7 +320,7 @@
                 </div>
                 <div class="timeline-item mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 timeline-dot"></div>
+                    <div class="hidden md:flex z-20 items-center order-1 timeline-dot"></div>
                     <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
                         <p class="text-gray-600 text-sm">16:30 - 17:30</p>
                         <h3 class="font-bold text-gray-900 text-lg">Inaugural Address & Keynote</h3>
@@ -334,7 +329,7 @@
                 </div>
                  <div class="timeline-item mb-8 flex justify-between items-center w-full right-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 timeline-dot"></div>
+                    <div class="hidden md:flex z-20 items-center order-1 timeline-dot"></div>
                     <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
                         <p class="text-gray-600 text-sm">18:00 - 18:30</p>
                         <h3 class="font-bold text-gray-900 text-lg">Panel: AI, Ethics, and the Law</h3>
@@ -342,7 +337,7 @@
                 </div>
                 <div class="timeline-item mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
                     <div class="order-1 md:w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 timeline-dot"></div>
+                    <div class="hidden md:flex z-20 items-center order-1 timeline-dot"></div>
                     <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
                         <p class="text-gray-600 text-sm">18:30 - 19:30</p>
                         <h3 class="font-bold text-gray-900 text-lg">Fireside Chat: Corporate Cyber Governance</h3>
